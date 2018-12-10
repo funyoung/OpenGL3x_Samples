@@ -13,10 +13,14 @@ public class Sample3_1Activity extends Activity
         super.onCreate(savedInstanceState);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        mview =new MyTDView(this);
+//        mview =new MyTDView(this);
+//        mview.requestFocus();
+//        mview.setFocusableInTouchMode(true);
+//        setContentView(mview);
+        setContentView(R.layout.sample_activity);
+        mview = findViewById(R.id.m_view);
         mview.requestFocus();
         mview.setFocusableInTouchMode(true);
-        setContentView(mview);
     }
     @Override
     public void onResume()

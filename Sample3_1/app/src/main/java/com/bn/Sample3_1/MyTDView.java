@@ -5,6 +5,7 @@ import android.opengl.GLES20;
 import android.opengl.GLES30;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
+import android.util.AttributeSet;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -16,7 +17,11 @@ public class MyTDView extends GLSurfaceView {
     SceneRenderer mRenderer;
 
     public MyTDView(Context context) {
-        super(context);
+        this(context, null);
+    }
+
+    public MyTDView(Context context, AttributeSet attrs) {
+        super(context, attrs);
         this.setEGLContextClientVersion(3);
         mRenderer = new SceneRenderer();
         this.setRenderer(mRenderer);
